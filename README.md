@@ -10,6 +10,7 @@ A desktop GUI tool that downloads any file (from any public URL) and saves it di
 
 * [English 🇺🇸](README.md)
 * [فارسی 🇮🇷](README_FA.md)
+* [Türkçe 🇹🇷](README_TR.md)
 
 ---
 
