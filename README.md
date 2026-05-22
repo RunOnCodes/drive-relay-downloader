@@ -6,6 +6,13 @@ A desktop GUI tool that downloads any file (from any public URL) and saves it di
 ![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green)
 ![Apps Script](https://img.shields.io/badge/Google-AppsScript-yellow)
 
+## 🌐 Available Languages
+
+* [English 🇺🇸](README.md)
+* [فارسی 🇮🇷](README_FA.md)
+
+---
+
 ## ✨ Features
 
 * **Bypass Local Storage:** The file goes directly from the source URL to your Google Drive. It never downloads to your local hard drive.
@@ -78,11 +85,16 @@ You have two ways to start the application:
 
 <img width="933" height="759" alt="image" src="https://github.com/user-attachments/assets/7d1c6ade-18dd-4566-97a0-2860379c2561" />
 
-
 ---
 
 ## ⚠️ Limitations & Notes
 
-* **50 MB File Limit:** Google Apps Script has a strict memory limit for fetching and manipulating blobs (`UrlFetchApp`). The Python GUI will warn you if it detects a file larger than 50 MB, as the relay will likely fail to process it.
+* **50 MB File Limit:** Google Apps Script has a strict memory limit for fetching and manipulating blobs (`UrlFetchApp`). The Python GUI will warn you if it detects a file larger than 50 MB, as the Apps Script likely won't have enough memory to handle it.
 * **Timeouts:** The Apps Script execution limit is 6 minutes. Extremely slow source servers might cause the script to time out before the file finishes transferring.
-* **Direct Links Only:** The provided URL must be a direct file link (it should immediately start a download when pasted into a browser) and publicly accessible. Pages that require a login or clicking a secondary download button will not work.
+* **Direct Links Only:** The provided URL must be a direct file link (it should immediately start a download when pasted into a browser) and publicly accessible. Pages that require a login or clicking are not supported.
+
+---
+
+## 📝 License
+
+This project is open-source and available under the MIT License.
