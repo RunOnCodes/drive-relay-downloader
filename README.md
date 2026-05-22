@@ -35,7 +35,50 @@ A desktop GUI tool that downloads any file (from any public URL) and saves it di
 
 ## 🛠️ Setup Instructions
 
-### 1. Deploy the Google Apps Script
+### Prerequisites
+
+* **Python 3.7+** installed on your system
+
+### 1. Install Required Dependencies
+
+This application requires two key components:
+- **`requests`** - Python library for HTTP requests (installs via pip)
+- **`Tkinter`** - GUI library (usually pre-installed with Python)
+
+#### Option A: Using requirements.txt (Recommended)
+
+```bash
+pip install -r requirements.txt
+```
+
+#### Option B: Manual Installation
+
+```bash
+pip install requests
+```
+
+#### Install Tkinter by Operating System:
+
+**Windows & macOS:**
+- Tkinter is pre-installed with Python. No additional action needed.
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get update
+sudo apt-get install python3-tk
+```
+
+**Fedora/RHEL/CentOS:**
+```bash
+sudo dnf install python3-tkinter
+```
+
+**Arch Linux:**
+```bash
+sudo pacman -S tk
+```
+
+### 2. Deploy the Google Apps Script
 
 * Open [script.google.com](https://script.google.com) and create a new project.
 * Replace the default code with the content of [`ScriptToDeploy.gs`](ScriptToDeploy.gs).
@@ -43,17 +86,13 @@ A desktop GUI tool that downloads any file (from any public URL) and saves it di
     `const folderId = 'YOUR_DRIVE_FOLDER_ID';`  
     *(Find your folder ID in its Drive URL: `https://drive.google.com/drive/folders/THIS_IS_THE_ID`)*
 * Deploy as a **Web App**:
-    * Execute as: **Me** * Who has access: **Anyone** (or "Anyone with link" – the tool needs to be able to reach it).
+    * Execute as: **Me**
+    * Who has access: **Anyone** (or "Anyone with link" – the tool needs to be able to reach it).
     * Click **Deploy** → **New deployment** → **Web app**.  
     * Copy the **deployment URL** (looks like `https://script.google.com/macros/s/.../exec`).
 
-### 2. Configure the Python Environment
+### 3. Configure the Python Application
 
-* Ensure you have **Python 3.7+** installed.
-* Install the required `requests` library:  
-    ```bash
-    pip install requests
-    ```
 * Edit `relay_config.json` and paste your Apps Script URL:  
     ```json
     {
@@ -78,7 +117,7 @@ You have two ways to start the application:
 
 ### Using the Interface
 
-* **Apps Script URL:** Paste the web app URL you generated in Step 1.
+* **Apps Script URL:** Paste the web app URL you generated in Step 2.
 * **Drive Folder ID (Optional):** If you want to save a specific file to a different folder than the default one hardcoded in your Apps Script, paste the new folder ID here.
 * **File URL:** The direct download link to the file.
 * **Save as (Optional):** Provide a custom name (e.g., `report_2026.pdf`). If left blank, the app will auto-detect the name from the URL.
