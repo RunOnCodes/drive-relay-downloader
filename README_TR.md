@@ -35,7 +35,50 @@ Herhangi bir dosyayı (herhangi bir genel URL'den) indirebilen ve doğrudan **Go
 
 ## 🛠️ Kurulum Talimatları
 
-### 1. Google Apps Script'i Dağıtın
+### Ön Koşullar
+
+* **Python 3.7+** sisteminizde yüklü
+
+### 1. Gerekli Bağımlılıkları Yükleyin
+
+Bu uygulama iki ana bileşen gerektirir:
+- **`requests`** - HTTP istekleri için Python kütüphanesi (pip aracılığıyla kurulum)
+- **`Tkinter`** - GUI kütüphanesi (genellikle Python ile önceden yüklü)
+
+#### Seçenek A: requirements.txt Kullanma (Önerilen)
+
+```bash
+pip install -r requirements.txt
+```
+
+#### Seçenek B: Manuel Kurulum
+
+```bash
+pip install requests
+```
+
+#### İşletim Sisteminize Göre Tkinter'i Kurun:
+
+**Windows ve macOS:**
+- Tkinter, Python ile önceden yüklüdür. Ek işlem gerekmez.
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get update
+sudo apt-get install python3-tk
+```
+
+**Fedora/RHEL/CentOS:**
+```bash
+sudo dnf install python3-tkinter
+```
+
+**Arch Linux:**
+```bash
+sudo pacman -S tk
+```
+
+### 2. Google Apps Script'i Dağıtın
 
 * [script.google.com](https://script.google.com) açın ve yeni bir proje oluşturun.
 * Varsayılan kodu [`ScriptToDeploy.gs`](ScriptToDeploy.gs) içeriğiyle değiştirin.
@@ -48,13 +91,8 @@ Herhangi bir dosyayı (herhangi bir genel URL'den) indirebilen ve doğrudan **Go
     * **Dağıt** → **Yeni dağıtım** → **Web uygulaması** öğesine tıklayın.  
     * **Dağıtım URL'sini** kopyalayın (`https://script.google.com/macros/s/.../exec` gibi görünür).
 
-### 2. Python Ortamını Yapılandırın
+### 3. Python Uygulamasını Yapılandırın
 
-* **Python 3.7+** yüklü olduğundan emin olun.
-* Gerekli `requests` kitaplığını yükleyin:  
-    ```bash
-    pip install requests
-    ```
 * `relay_config.json` dosyasını düzenleyin ve Apps Script URL'nizi yapıştırın:  
     ```json
     {
@@ -79,7 +117,7 @@ Uygulamayı başlatmanın iki yolu vardır:
 
 ### Arayüzü Kullanma
 
-* **Apps Script URL:** 1. Adımda oluşturduğunuz web uygulaması URL'sini yapıştırın.
+* **Apps Script URL:** 2. Adımda oluşturduğunuz web uygulaması URL'sini yapıştırın.
 * **Drive Klasör Kimliği (İsteğe Bağlı):** Belirli bir dosyayı Apps Script'inizde kodlanmış varsayılan klasörden farklı bir klasöre kaydetmek istiyorsanız, yeni klasör kimliğini buraya yapıştırın.
 * **Dosya URL'si:** Dosyaya doğrudan indirme bağlantısı.
 * **Farklı Kaydet (İsteğe Bağlı):** Özel bir ad sağlayın (örneğin, `report_2026.pdf`). Boş bırakılırsa, uygulama adı URL'den otomatik olarak algılar.
