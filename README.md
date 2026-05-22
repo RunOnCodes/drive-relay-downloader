@@ -76,6 +76,9 @@ You have two ways to start the application:
 * **Save as (Optional):** Provide a custom name (e.g., `report_2026.pdf`). If left blank, the app will auto-detect the name from the URL.
 * Click **"📥 Download to Drive"**.
 
+<img width="933" height="759" alt="image" src="https://github.com/user-attachments/assets/7d1c6ade-18dd-4566-97a0-2860379c2561" />
+
+
 ---
 
 ## ⚠️ Limitations & Notes
