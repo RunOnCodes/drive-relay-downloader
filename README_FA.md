@@ -47,7 +47,7 @@
     ```bash
     pip install requests
     ```
-* `relay_config.json` را ویرایش کنید و URL Apps Script خود را جایگ��ین کنید:  
+* `relay_config.json` را ویرایش کنید و URL Apps Script خود را جایگزین کنید:  
     ```json
     {
       "script_url": "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec",
