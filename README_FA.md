@@ -35,7 +35,50 @@
 
 ## 🛠️ دستورالعمل‌های راه‌اندازی
 
-### 1. استقرار Google Apps Script
+### پیش‌نیازها
+
+* **Python 3.7+** در سیستم شما نصب شده
+
+### 1. نصب وابستگی‌های مورد نیاز
+
+این برنامه به دو مؤلفه کلیدی نیاز دارد:
+- **`requests`** - کتابخانه Python برای درخواست‌های HTTP (نصب از طریق pip)
+- **`Tkinter`** - کتابخانه GUI (معمولاً از قبل با Python نصب شده است)
+
+#### گزینه الف: استفاده از requirements.txt (توصیه‌شده)
+
+```bash
+pip install -r requirements.txt
+```
+
+#### گزینه ب: نصب دستی
+
+```bash
+pip install requests
+```
+
+#### نصب Tkinter بر اساس سیستم‌عامل:
+
+**Windows و macOS:**
+- Tkinter از قبل با Python نصب شده است. هیچ عمل اضافی لازم نیست.
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get update
+sudo apt-get install python3-tk
+```
+
+**Fedora/RHEL/CentOS:**
+```bash
+sudo dnf install python3-tkinter
+```
+
+**Arch Linux:**
+```bash
+sudo pacman -S tk
+```
+
+### 2. استقرار Google Apps Script
 
 * [script.google.com](https://script.google.com) را باز کنید و یک پروژه جدید ایجاد کنید.
 * کد پیش‌فرض را با محتوای [`ScriptToDeploy.gs`](ScriptToDeploy.gs) جایگزین کنید.
@@ -48,13 +91,8 @@
     * روی **استقرار** کلیک کنید → **استقرار جدید** → **وب برنامه**.  
     * **URL استقرار** را کپی کنید (شبیه `https://script.google.com/macros/s/.../exec` به نظر می‌رسد).
 
-### 2. محیط Python را پیکربندی کنید
+### 3. پیکربندی برنامه Python
 
-* مطمئن شوید که **Python 3.7+** نصب شده است.
-* کتابخانه `requests` مورد نیاز را نصب کنید:  
-    ```bash
-    pip install requests
-    ```
 * `relay_config.json` را ویرایش کنید و URL Apps Script خود را جایگزین کنید:  
     ```json
     {
@@ -79,7 +117,7 @@
 
 ### استفاده از رابط کاربری
 
-* **URL Apps Script:** URL برنامه وب را که در مرحله 1 تولید کردید جایگزین کنید.
+* **URL Apps Script:** URL برنامه وب را که در مرحله 2 تولید کردید جایگزین کنید.
 * **شناسه پوشه Drive (اختیاری):** اگر می‌خواهید یک فایل خاص را به پوشه‌ای متفاوت از پوشه پیش‌فرض‌ای که در Apps Script خود کدگذاری کرده‌اید ذخیره کنید، شناسه پوشه جدید را اینجا جایگزین کنید.
 * **URL فایل:** لینک دانلود مستقیم به فایل.
 * **ذخیره به‌عنوان (اختیاری):** یک نام سفارشی فراهم کنید (به‌عنوان‌مثال، `report_2026.pdf`). اگر خالی باقی مانده باشد، برنامه به‌طور خودکار نام را از URL تشخیص می‌دهد.
