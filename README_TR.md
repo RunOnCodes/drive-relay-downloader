@@ -6,6 +6,14 @@ Herhangi bir dosyayı (herhangi bir genel URL'den) indirebilen ve doğrudan **Go
 ![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green)
 ![Apps Script](https://img.shields.io/badge/Google-AppsScript-yellow)
 
+## 📚 Diğer Diller
+
+* [English 🇺🇸](README.md)
+* [فارسی 🇮🇷](README_FA.md)
+* [Türkçe 🇹🇷](README_TR.md)
+
+---
+
 ## ✨ Özellikler
 
 * **Yerel Depolama Bypası:** Dosya doğrudan kaynak URL'den Google Drive'ınıza gider. Hiçbir zaman yerel sabit sürücünüze indirilmez.
@@ -86,10 +94,3 @@ Uygulamayı başlatmanın iki yolu vardır:
 * **50 MB Dosya Sınırı:** Google Apps Script, blobları getirmek ve işlemek için katı bir bellek sınırı vardır (`UrlFetchApp`). Python GUI, 50 MB'dan büyük bir dosya algılarsa sizi uyarır, çünkü Apps Script büyük olasılıkla bellekten çıkacaktır.
 * **Zaman Aşımı:** Apps Script yürütme sınırı 6 dakikadır. Aşırı yavaş kaynak sunucuları, dosya aktarımı tamamlanmadan önce betiğin zaman aşımına uğramasına neden olabilir.
 * **Yalnızca Doğrudan Bağlantılar:** Sağlanan URL, doğrudan bir dosya bağlantısı olmalıdır (tarayıcıya yapıştırıldığında hemen indirmedir ve genel olarak erişilebilir olmalıdır. Giriş veya tıklama gerektiren sayfalar desteklenmez.
-
----
-
-## 📚 Diğer Diller
-
-* [English 🇺🇸](README.md)
-* [فارسی 🇮🇷](README_FA.md)
